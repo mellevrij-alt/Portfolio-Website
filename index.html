@@ -130,53 +130,23 @@
 </section>
 
 <!-- BUILDER (NEW CORE FEATURE) -->
-<section id="builder">
-  <h2>Build Your Own Portfolio</h2>
+<div id="portfolioPreview">
 
-  <p>Create your own portfolio below</p>
-
-  <div style="max-width:500px; margin:auto;">
-
-    <input id="nameInput" placeholder="Your Name"><br><br>
-    <textarea id="aboutInput" placeholder="About you"></textarea><br><br>
-
-    <input id="projectTitle" placeholder="Project Title"><br><br>
-    <input id="projectDesc" placeholder="Project Description"><br><br>
-
-    <button class="btn" onclick="generatePortfolio()">Generate</button>
-
+  <!-- HEADER -->
+  <div class="portfolio-header">
+    <h1 id="previewName">Your Name</h1>
   </div>
 
-  <div id="output" style="margin-top:40px;">
-    <h3 id="outputName"></h3>
-    <p id="outputAbout"></p>
-
-    <div id="outputProjects"></div>
+  <!-- ABOUT -->
+  <div class="portfolio-about">
+    <h2>About Me</h2>
+    <p id="previewAbout">Your description will appear here.</p>
   </div>
 
-</section>
+  <!-- PROJECTS -->
+  <div class="portfolio-projects">
+    <h2>My Projects</h2>
+    <div id="previewProjects" class="portfolio-grid"></div>
+  </div>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 My Portfolio</p>
-</footer>
-
-<!-- External JS -->
-<script src="script.js"></script>
-
-<script>
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
-}
-</script>
-
-</body>
-</html>
+</div>
