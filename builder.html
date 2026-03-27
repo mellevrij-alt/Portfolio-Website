@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="extStyle.css">
+</head>
+<body>
+
+<section id="builder" style="padding:80px 50px; text-align:center;">
+  <h2>Create Your Portfolio</h2>
+
+  <div style="max-width:500px; margin:auto;">
+    <input id="nameInput" placeholder="Your Name"><br><br>
+    <textarea id="aboutInput" placeholder="About you"></textarea><br><br>
+    <input id="projectTitle" placeholder="Project Title"><br><br>
+    <input id="projectDesc" placeholder="Project Description"><br><br>
+    <button class="btn" onclick="generateExtendedPortfolio()">Generate Portfolio</button>
+  </div>
+
+  <div id="extPortfolioPreview" style="margin-top:40px;">
+    <div class="portfolio-header">
+      <h1 id="extPreviewName">Your Name</h1>
+    </div>
+    <div class="portfolio-about">
+      <h2>About Me</h2>
+      <p id="extPreviewAbout">Your description will appear here.</p>
+    </div>
+    <div class="portfolio-projects">
+      <h2>Projects</h2>
+      <div id="extPreviewProjects" class="portfolio-grid"></div>
+    </div>
+  </div>
+</section>
+
+<script src="extScript.js"></script>
+
+</body>
+</html>
