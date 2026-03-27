@@ -251,3 +251,34 @@ footer {
     padding: 60px 20px;
   }
 }
+/* BUILDER */
+.builder-form {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.builder-form input,
+.builder-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#output {
+  margin-top: 40px;
+}
+
+#outputProjects {
+  margin-top: 20px;
+}
+
+.project-output {
+  background: #111827;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 400px;
+}
