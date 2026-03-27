@@ -276,3 +276,23 @@ function scrollToSection(id) {
 
 </body>
 </html>
+<section id="builder">
+  <h2>Create Your Own Portfolio</h2>
+
+  <div class="builder-form">
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <textarea id="aboutInput" placeholder="About you"></textarea>
+
+    <input type="text" id="projectTitle" placeholder="Project Title">
+    <input type="text" id="projectDesc" placeholder="Project Description">
+
+    <button onclick="generatePortfolio()">Generate Portfolio</button>
+  </div>
+
+  <div id="output">
+    <h3 id="outputName"></h3>
+    <p id="outputAbout"></p>
+
+    <div id="outputProjects"></div>
+  </div>
+</section>
