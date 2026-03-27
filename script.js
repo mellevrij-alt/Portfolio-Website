@@ -58,3 +58,53 @@ function removeProject(index) {
   projects.splice(index, 1);
   renderProjects();
 }
+// Smooth scroll
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+// Store projects
+let projects = [];
+
+// Generate portfolio
+function generatePortfolio() {
+  const name = document.getElementById("nameInput").value;
+  const about = document.getElementById("aboutInput").value;
+  const title = document.getElementById("projectTitle").value;
+  const desc = document.getElementById("projectDesc").value;
+
+  // Set main info
+  document.getElementById("previewName").innerText = name || "Your Name";
+  document.getElementById("previewAbout").innerText = about || "Your description here.";
+
+  // Add project
+  if (title !== "" && desc !== "") {
+    projects.push({ title, desc });
+  }
+
+  renderProjects();
+
+  // Clear inputs
+  document.getElementById("projectTitle").value = "";
+  document.getElementById("projectDesc").value = "";
+}
+
+// Render projects in real layout
+function renderProjects() {
+  const container = document.getElementById("previewProjects");
+  container.innerHTML = "";
+
+  projects.forEach(project => {
+    const card = document.createElement("div");
+    card.classList.add("portfolio-card");
+
+    card.innerHTML = `
+      <h3>${project.title}</h3>
+      <p>${project.desc}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
