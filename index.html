@@ -150,3 +150,38 @@
   </div>
 
 </div>
+<section id="builderExtension" style="padding:80px 50px; text-align:center; background:#0d111e; border-top: 2px solid #00d4ff;">
+  <h2>Create Your Portfolio</h2>
+  <p>Use this section to build your portfolio like a real website!</p>
+
+  <div style="max-width:500px; margin:auto; text-align:left;">
+    <label for="extName">Your Name</label><br>
+    <input id="extName" placeholder="Your Name"><br><br>
+
+    <label for="extAbout">About You</label><br>
+    <textarea id="extAbout" placeholder="Write about yourself"></textarea><br><br>
+
+    <label for="extProjectTitle">Project Title</label><br>
+    <input id="extProjectTitle" placeholder="Project Title"><br><br>
+
+    <label for="extProjectDesc">Project Description</label><br>
+    <input id="extProjectDesc" placeholder="Project Description"><br><br>
+
+    <button class="btn" onclick="generateExtendedPortfolio()">Generate Portfolio</button>
+  </div>
+
+  <!-- Portfolio preview -->
+  <div id="extPortfolioPreview" style="margin-top:40px;">
+    <div class="portfolio-header">
+      <h1 id="extPreviewName">Your Name</h1>
+    </div>
+    <div class="portfolio-about">
+      <h2>About Me</h2>
+      <p id="extPreviewAbout">Your description will appear here.</p>
+    </div>
+    <div class="portfolio-projects">
+      <h2>Projects</h2>
+      <div id="extPreviewProjects" class="portfolio-grid"></div>
+    </div>
+  </div>
+</section>
