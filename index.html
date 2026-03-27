@@ -1,29 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- FUTURE CSS FILE -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0f1a;
+      color: white;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      color: #00d4ff;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 80px 50px;
+      text-align: center;
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 span {
+      color: #00d4ff;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #00d4ff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ABOUT */
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+    }
+
+    /* SKILLS */
+    .skill {
+      margin: 15px 0;
+    }
+
+    .bar {
+      background: #1e293b;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .fill {
+      height: 10px;
+      background: #00d4ff;
+      border-radius: 5px;
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #00d4ff;
+      color: black;
+      text-decoration: none;
+    }
+
+    /* CONTACT */
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Home</h2>
-        <p>This is my portfolio website where you can find my projects and get to know me better.</p>
-    </main>
-    <footer>
-        <p>&copy; 2026 Melle Vrij</p>
-    </footer>
+
+<header>
+  <nav>
+    <h1>MyPortfolio</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Hello, I'm <span>Your Name</span></h1>
+  <p>Student developer building real websites</p>
+  <button onclick="scrollToSection('projects')">See My Work</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a student learning web development. I enjoy creating websites,
+    solving problems, and improving my coding skills.
+  </p>
+
+  <br>
+
+  <!-- FUTURE: CV DOWNLOAD -->
+  <a href="#" download style="background:#00d4ff; padding:10px; color:black;">
+    Download CV
+  </a>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <p>HTML</p>
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="bar"><div class="fill" style="width:60%"></div></div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>This portfolio website.</p>
+
+      <!-- FUTURE: LINK TO NEW PAGE -->
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>School Project</h3>
+      <p>My informatics assignment.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Game Project</h3>
+      <p>Simple JavaScript game.</p>
+      <a href="#">View Code</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <br>
+
+  <p>Email: your@email.com</p>
+  <p>GitHub: github.com/yourname</p>
+</section>
+
+<footer>
+  <p>© 2026 My Portfolio</p>
+</footer>
+
+<!-- FUTURE JS FILE -->
+<script src="script.js"></script>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
+
 </body>
 </html>
